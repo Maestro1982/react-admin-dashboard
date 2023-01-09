@@ -1,7 +1,7 @@
 import React, { useMemo } from 'react';
 import { CssBaseline, ThemeProvider } from '@mui/material';
 import { createTheme } from '@mui/material/styles';
-import { themeSettings } from 'theme';
+import { themeSettings } from './theme';
 import { useSelector } from 'react-redux';
 import {
   BrowserRouter as Router,
@@ -9,8 +9,8 @@ import {
   Route,
   Navigate,
 } from 'react-router-dom';
-import Layout from 'scenes/layout';
-import Dashboard from 'scenes/dashboard';
+import Layout from './scenes/layout';
+import Dashboard from './scenes/dashboard';
 
 const App = () => {
   const mode = useSelector((state) => state.global.mode);

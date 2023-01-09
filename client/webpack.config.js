@@ -1,5 +1,5 @@
-import path from 'path';
-import HtmlWebpackPlugin from 'html-webpack-plugin';
+const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   mode: 'development',
@@ -33,7 +33,7 @@ module.exports = {
         use: ['style-loader', 'css-loader'],
       },
       {
-        test: /\.(gif|svg|jpg|png|webp|avif)$/,
+        test: /\.(gif|svg|jpg|jpeg|png|webp|avif)$/,
         loader: 'file-loader',
       },
     ],
