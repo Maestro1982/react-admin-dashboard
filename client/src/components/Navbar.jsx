@@ -19,7 +19,7 @@ import {
   useTheme,
 } from '@mui/material';
 
-const Navbar = () => {
+const Navbar = ({ isSidebarOpen, setIsSidebarOpen }) => {
   const dispatch = useDispatch();
   const theme = useTheme();
   return (
