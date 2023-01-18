@@ -15,11 +15,13 @@ import User from './models/userModel.js';
 import Product from './models/productModel.js';
 import ProductStat from './models/productStatModel.js';
 import Transaction from './models/transactionModel.js';
+import OverallStat from './models/overAllStatModel.js';
 import {
   dataUser,
   dataProduct,
   dataProductStat,
   dataTransaction,
+  dataOverallStat,
 } from './data/index.js';
 
 /* CONFIGURATION */
@@ -54,6 +56,7 @@ mongoose
       //Product.insertMany(dataProduct);
       //ProductStat.insertMany(dataProductStat);
       //Transaction.insertMany(dataTransaction);
+      ///OverallStat.insertMany(dataOverallStat);
       //User.insertMany(dataUser);
     });
   })
