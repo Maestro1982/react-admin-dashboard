@@ -12,8 +12,11 @@ const Transactions = () => {
   const [page, setPage] = useState(0);
   const [pageSize, setPageSize] = useState(20);
   const [sort, setSort] = useState({});
+  // When you hit enter, final search state will be locked in here
   const [search, setSearch] = useState('');
 
+  // Temporary search state
+  const [searchInput, setSearchInput] = useState('');
   const { data, isLoading } = useGetTransactionsQuery({
     page,
     pageSize,
@@ -97,6 +100,9 @@ const Transactions = () => {
           onPageSizeChange={(newPageSize) => setPageSize(newPageSize)}
           onSortModelChange={(newSortModel) => setSort(...newSortModel)}
           components={{ Toolbar: DataGridCustomToolbar }}
+          componentsProps={{
+            toolbar: { searchInput, setSearchInput, setSearch },
+          }}
         />
       </Box>
     </Box>
