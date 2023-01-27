@@ -15,7 +15,7 @@ import Products from './scenes/products';
 import Customers from './scenes/customers';
 import Transactions from './scenes/transactions';
 import Geography from './scenes/geography';
-import Overview from './scenes/Overview';
+import Overview from './scenes/overview';
 import Daily from './scenes/daily';
 import Monthly from './scenes/monthly';
 import Breakdown from './scenes/breakdown';
